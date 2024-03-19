@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Tutorials</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Minimum height of the viewport */
+            position: relative; /* Position relative for absolute positioning */
+        }
+
+        header {
+            position: relative;
+            background-color: #3867d6;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            border-radius: 0px 0px 50px 50px;
+        }
+
+        header h1 {
+            margin-left: -500px;
+            font-size: 2.3em;
+        }
+
+        .hero {
+            text-align: center;
+            width: 700px; /* Increase width to 700px */
+            height: 300px; /* Increase height to 300px */
+            margin-left: 100px; /* Center horizontally */
+            margin-top: 100px;
+            background-color: #3867d6;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            margin-top: 20px; /* Move h2 20px below */
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #fff;
+            margin-top: 50px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2c56b7;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s; /* Added transform to the transition */
+            text-transform: uppercase; /* Convert text to uppercase */
+            font-weight: bold; /* Make text bold */
+            cursor: pointer; /* Change cursor to pointer */
+            position: relative; /* Position relative for absolute positioning */
+        }
+
+        .btn:hover {
+            background-color: #1f3d7a;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); /* Add box-shadow on hover */
+            transform: translateY(-10px); /* Move button 10px upwards on hover */
+        }
+
+        .btn:active {
+            top: 4px; /* Move button slightly upwards on click */
+            box-shadow: none; /* Remove box-shadow on click */
+        }
+
+        .btnex {
+            display: inline-block;
+            background-color: #2c56b7;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s; /* Added transform to the transition */
+            text-transform: uppercase; /* Convert text to uppercase */
+            font-weight: bold; /* Make text bold */
+            cursor: pointer; /* Change cursor to pointer */
+            position: relative; /* Position relative for absolute positioning */
+            margin-top: 40px;
+        }
+
+        .btnex:hover {
+            background-color: #1f3d7a;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); /* Add box-shadow on hover */
+            transform: translateY(-10px); /* Move button 10px upwards on hover */
+        }
+
+        .btnex:active {
+            top: 4px; /* Move button slightly upwards on click */
+            box-shadow: none; /* Remove box-shadow on click */
+        }
+
+        .nav {
+            position: absolute; /* Position absolute for positioning */
+            top: 40px; /* Adjust top position */
+            right: 200px; /* Adjust right position */
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #fff; /* Change text color to white */
+            font-weight: bold; /* Make text bold */
+            margin: 0 10px; /* Add margin around each anchor tag */
+            padding: 10px 20px; /* Add padding around each anchor tag */
+            border-radius: 5px; /* Add border radius */
+            transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+        }
+
+        .nav a:hover {
+            background-color: #1f3d7a; /* Change background color on hover */
+        }
+
+        footer {
+            background-color: #3867d6;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+      /* Adjusted CSS */
+      .main {
+          position: absolute;
+          top: 52%;
+          right: 50px; /* Adjust the distance from the right side */
+          transform: translateY(-50%);
+      }
+
+      img {
+          width: 500px;
+          height: 300px;
+        border-radius: 50px;
+      }
+      
+        /* Custom styles for span classes */
+        .black-bold {
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Media Query for Mobile */
+        @media only screen and (max-width: 768px) {
+            header h1 {
+                margin-left: 0;
+                font-size: 1.8em; /* Adjust font size for mobile */
+            }
+            .hero {
+                width: 90%; /* Adjust width for mobile */
+                margin: 50px auto; /* Center hero section */
+            }
+            .hero h2 {
+                margin-top: 10px; /* Adjust margin for h2 on mobile */
+            }
+            .hero p {
+                margin-top: 30px; /* Adjust margin for p on mobile */
+            }
+            .btnex {
+                margin-top: 20px; /* Adjust margin for Explore Courses button on mobile */
+            }
+        }
+    </style>
+</head>
+
+  <body>
+      <header>
+          <h1><span class="black-bold">O</span>nline <span class="black-bold">T</span>utorials</h1>
+      </header>
+
+      <div class="nav">
+          <a href="#" class="btn">Home</a>
+          <a href="#" class="btn">Top Courses</a>
+      </div>
+
+      <section class="hero">
+          <h2>Start your Coding journey with <br><span class="black-bold">O</span>nline <span class="black-bold">T</span>utorials</h2>
+          <p>Learn to code with <span class="black-bold">OT!</span> Step-by-step, Any-time & from Any-where </p>
+          <a href="#" class="btnex" onclick="redirectToCoursePage()">Explore Courses</a>
+      </section>
+
+      <div class="main">
+          <img src="OT.jpg">
+      </div>
+
+      <footer>
+          <p>&copy; 2024 Online Tutorials. All rights reserved.</p>
+      </footer>
+
+      <script>
+          function redirectToCoursePage() {
+              // Check if user has an account
+              var hasAccount = true; // Assume user has an account for demonstration purpose
+
+              // Redirect based on whether the user has an account or not
+              if (hasAccount) {
+                  window.location.href = "course.html"; // Redirect to course page
+              } else {
+                  window.location.href = "signup.html"; // Redirect to sign up page
+              }
+          }
+      </script>
+  </body>
+
+
+</html>
