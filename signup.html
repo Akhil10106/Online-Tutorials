@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - My E-Learning Website</title>
+    <style>
+        /* Resetting default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9fafc;
+        }
+
+        header {
+            position: relative;
+            background-color: #3867d6;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            border-radius: 0px 0px 50px 50px;
+            margin-bottom: 50px;
+            /* Add some margin at the bottom */
+        }
+
+        main {
+            text-align: center;
+            /* Center the content horizontally */
+        }
+
+        main a {
+            margin-top: 200px;
+            margin-left: 900px;
+            background-color: #2c56b7;
+            color: #fff;
+            padding: 15px 50px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+            /* Added transform to the transition */
+            text-transform: uppercase;
+            /* Convert text to uppercase */
+            font-weight: bold;
+            /* Make text bold */
+            cursor: pointer;
+            /* Change cursor to pointer */
+            position: relative;
+            /* Position relative for absolute positioning */
+        }
+
+        main a:hover {
+            background-color: #1f3d7a;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+            /* Add box-shadow on hover */
+        }
+
+        header h1 {
+            font-size: 2.3em;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 45px;
+            right: 150px;
+        }
+
+        .header-buttons .button {
+            background-color: #2c56b7;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+            /* Added transform to the transition */
+            text-transform: uppercase;
+            /* Convert text to uppercase */
+            font-weight: bold;
+            /* Make text bold */
+            cursor: pointer;
+            /* Change cursor to pointer */
+            position: relative;
+            /* Position relative for absolute positioning */
+        }
+
+        .header-buttons .button:hover {
+            background-color: #1f3d7a;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+            /* Add box-shadow on hover */
+        }
+
+        .signup-form {
+            background: linear-gradient(135deg, #3867d6, #2c56b7);
+            /* Gradient background */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            /* Soft shadow effect */
+            max-width: 400px;
+            margin: 50px auto;
+            /* Center the form vertically and add some margin */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -240px;
+            margin-bottom: 30px;
+            /* Add margin to the bottom */
+        }
+
+        h2 {
+            color: #000;
+            font-weight: bold;
+            font-size: 4em;
+            margin-left: -1100px;
+            margin-top: 160px;
+        }
+
+        .form {
+            color: #2c56b7;
+        }
+
+        .signup-form label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+            color: #fff;
+            /* Text color */
+        }
+
+        .signup-form input[type="text"],
+        .signup-form input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 25px;
+            /* Rounded input fields */
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Semi-transparent white background */
+        }
+
+        .signup-form input[type="text"]:focus,
+        .signup-form input[type="password"]:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 1);
+            /* Fully opaque white background on focus */
+        }
+
+        .signup-form button {
+            background-color: #2c56b7;
+            color: #000;
+            font-weight: bold;
+            border: none;
+            padding: 12px 50px;
+            border-radius: 25px;
+            /* Rounded button */
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 1.5em;
+        }
+
+        .signup-form button:hover {
+            background-color: #1f3d7a;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+            /* Add box-shadow on hover */
+        }
+
+        footer {
+            background-color: #3867d6;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        /* Custom styles for span classes */
+        .black-bold {
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><span class="black-bold">O</span>nline <span class="black-bold">T</span>utorials</h1>
+        <div class="header-buttons">
+            <a href="index.html" class="button">Home</a>
+            <a href="#" class="button">New Courses</a>
+        </div>
+    </header>
+
+    <main>
+        <h2>Sign up<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="form">Form</span></h2>
+        <a href="login.html" class="button">Log in</a>
+        <section class="signup-form">
+            <form onsubmit="return validateForm()">
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My E-Learning Website</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            var fullName = document.getElementById('fullname').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Check if full name contains only letters and spaces
+            var nameRegex = /^[a-zA-Z\s]*$/;
+            if (!nameRegex.test(fullName)) {
+                alert("Please enter a valid full name.");
+                return false;
+            }
+
+            // Check if email is valid
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Check if password is at least 6 characters long
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            // If all validations pass, return true to submit the form
+            return true;
+        }
+    </script>
+</body>
+
+</html>
