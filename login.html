@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - My E-Learning Website</title>
+  <style>
+    /* Resetting default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fafc;
+    }
+
+    header {
+      position: relative;
+      background-color: #3867d6;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+      border-radius: 0px 0px 50px 50px;
+      margin-bottom: 50px;
+      /* Add some margin at the bottom */
+    }
+
+    main {
+      text-align: center;
+      /* Center the content horizontally */
+    }
+
+    main a {
+        margin-top: 200px;
+        margin-left: 900px;
+        background-color: #2c56b7;
+        color: #fff;
+        padding: 15px 50px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+        /* Added transform to the transition */
+        text-transform: uppercase;
+        /* Convert text to uppercase */
+        font-weight: bold;
+        /* Make text bold */
+        cursor: pointer;
+        /* Change cursor to pointer */
+        position: relative;
+        /* Position relative for absolute positioning */
+    }
+
+    main a:hover {
+        background-color: #1f3d7a;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+        /* Add box-shadow on hover */
+    }
+
+    header h1 {
+      margin-left: -500px;
+      font-size: 2.3em;
+    }
+
+    .header-buttons {
+      position: absolute;
+      top: 45px;
+      right: 150px;
+    }
+
+    .header-buttons .button {
+      background-color: #2c56b7;
+      color: #fff;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+      /* Added transform to the transition */
+      text-transform: uppercase;
+      /* Convert text to uppercase */
+      font-weight: bold;
+      /* Make text bold */
+      cursor: pointer;
+      /* Change cursor to pointer */
+      position: relative;
+      /* Position relative for absolute positioning */
+    }
+
+    .header-buttons .button:hover {
+      background-color: #1f3d7a;
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+      /* Add box-shadow on hover */
+    }
+
+    .login-form {
+      background: linear-gradient(135deg, #3867d6, #2c56b7);
+      /* Gradient background */
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      /* Soft shadow effect */
+      max-width: 400px;
+      margin: 100px auto;
+      /* Center the form vertically */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -200px;
+    }
+
+    h2 {
+      color: #000;
+      font-weight: bold;
+      font-size: 4em;
+      margin-left: -1100px;
+      margin-top: 160px;
+    }
+    .form{
+      color: #2c56b7;
+    }
+
+    .login-form label {
+      display: block;
+      margin-bottom: 10px;
+      text-align: left;
+      color: #fff;
+      /* Text color */
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 25px;
+      /* Rounded input fields */
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Semi-transparent white background */
+    }
+
+    .login-form input[type="text"]:focus,
+    .login-form input[type="password"]:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 1);
+      /* Fully opaque white background on focus */
+    }
+
+    .login-form button {
+      background-color: #2c56b7;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 12px 50px;
+      border-radius: 25px;
+      /* Rounded button */
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      font-size: 1.5em;
+    }
+
+    .login-form button:hover {
+      background-color: #1f3d7a;
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+      /* Add box-shadow on hover */
+    }
+
+    footer {
+      background-color: #3867d6;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    /* Custom styles for span classes */
+    .black-bold {
+      color: #000;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><span class="black-bold">O</span>nline <span class="black-bold">T</span>utorials</h1>
+    <div class="header-buttons">
+      <a href="index.html" class="button">Home</a>
+      <a href="#" class="button">New Courses</a>
+    </div>
+  </header>
+
+  <main>
+    <h2>Login<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="form">Form</span></h2>
+    <a href="signup.html" class="button">Sign up</a>
+    <section class="login-form">
+      <form onsubmit="return validateForm()">
+        <label for="username">Email:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My E-Learning Website</p>
+  </footer>
+
+  <script>
+    function validateForm() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Simple email validation
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(username)) {
+        alert("Please enter a valid email address");
+        return false;
+      }
+
+      // Password length check
+      if (password.length < 8) {
+        alert("Password must be at least 8 characters long");
+        return false;
+      }
+
+      // You can add more complex validations here if needed
+
+      return true; // Form is valid, submit it
+    }
+  </script>
+</body>
+
+</html>
